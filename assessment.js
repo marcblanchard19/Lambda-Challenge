@@ -7,9 +7,9 @@ After writing your function uncomment the matching function reference at the bot
 // 1. Write a function called helloWorld that returns the string 'Hello World!'.
 
 function helloWorld() {
-
+  return "Hello World!";
 }
-
+helloWorld();
 /*
 2. Write a function called lambdaSchool that has a single parameter called num.
      num will be a positive integer.
@@ -23,8 +23,19 @@ function helloWorld() {
              lambdaSchool(8); // returns 8
 */
 
-function lambdaSchool() {
-
+function lambdaSchool(num) {
+  if(num % 3 == 0){
+    return "Lambda";
+  }
+  if(num % 5 == 0){
+    return "School";
+  }
+  if((num % 3 == 0) && (num % 5 == 0)){
+    return "Lambda School";
+  }
+  if(!(num % 3 == 0) || !(num % 5 == 0)){
+    return num;
+  }
 }
 
 /*
@@ -38,8 +49,17 @@ function lambdaSchool() {
              longestString(['JavaScript', 'HTML', 'CSS']); // returns 'JavaScript'
 */
 
-function longestString() {
-
+function longestString(strs) {
+  strs = ["hi", "hello", "ni hao", "guten tag"];
+  var strings = 0;
+  var stringLong;
+  for(var i = 0; i < strs.length; i++){
+    if(strs[i].length < strings.length;){
+      strings = strs[i].length;
+      longest = strs[i];
+    }
+  }
+  return stringLong;
 }
 
 /*
@@ -63,7 +83,18 @@ function longestString() {
              computeUserAverageAge(users); // returns 62 (This number is rounded up from 61.6666)
 */
 
-function computeUserAverageAge() {
+function computeUserAverageAge(users) {
+  users = [{
+    name: "Marc Blanchard",
+    age: 20,
+  },
+  {
+    name: "Michael Stipp",
+    age: 52,
+  }
+
+  ]
+  var averageAge = round()((users.age[56] + users.age[20]) / 2));
 
 }
 
